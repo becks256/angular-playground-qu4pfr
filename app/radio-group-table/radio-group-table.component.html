@@ -1,0 +1,9 @@
+<table *ngFor="let obj of ItemsArray; index as rowIndex">
+  <tr>
+    <td *ngFor="let props of obj | keyvalue; index as i">
+      <input [name]="rowIndex" type="radio" />
+      <span *ngIf="i === 0">{{ props.value }}</span>
+      <span *ngIf="i > 0">{{ props.value }}</span>
+    </td>
+  </tr>
+</table>
